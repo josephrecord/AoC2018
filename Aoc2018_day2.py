@@ -1,5 +1,11 @@
 from collections import Counter
 
+l = ['abcde', 'fghij', 'klmno', 'pqrst', 'fguij', 'axcye', 'wvxyz']
+
+print(l)
+
+
+
 # count2 = 0
 # count3 = 0
 
@@ -31,14 +37,14 @@ from collections import Counter
 
 # if (c - (c & d)) == 1 and (d - (c & d)) == 1
 
-l = ['abcde', 'fghij', 'klmno', 'pqrst', 'fguij', 'axcye', 'wvxyz']
 
-for i in range(len(l)):
-    for j in range(len(l)):
-        c = Counter(l[i])
-        d = Counter(l[j])
 
-        if len(c - d) == 1 and len(d - c) == 1:
-            print(c)
-            print(d)
-            break
+# for i in range(len(l)):
+#     for j in range(len(l)):
+#         c = Counter(l[i])
+#         d = Counter(l[j])
+
+#         if len(c - d) == 1 and len(d - c) == 1:
+#             print(c)
+#             print(d)
+#             break
