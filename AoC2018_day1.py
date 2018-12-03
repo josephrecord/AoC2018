@@ -16,10 +16,6 @@ with open("C:\\Users\\jrecord\\Desktop\\AoC2018_day1.txt") as f:
 print(sum(freqs))
 
 while True:
-    # print("i is {}".format(i))
-    # print(len(subfreq))
-    # print(subfreq)
-
     res_freq = current_freq + freqs[i]
 
     if res_freq in subfreq:
