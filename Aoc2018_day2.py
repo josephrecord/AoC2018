@@ -1,12 +1,19 @@
 from collections import Counter
 
-l = ['abcde', 'fghij', 'klmno', 'pqrst', 'fguij', 'axcye', 'wvxyz']
+ids = []
+test = ['abcde', 'fghij', 'klmno', 'pqrst', 'fguij', 'axcye', 'wvxyz']
 
-# count2 = 0
-# count3 = 0
+count2 = 0
+count3 = 0
 
-# with open("C:\\Users\\jrecord\\Documents\\GitHub\\AoC2018\\AoC2018_day2.txt") as f:
-#         line = f.readline()
+with open("C:\\Users\\jrecord\\Documents\\GitHub\\AoC2018\\AoC2018_day2.txt") as f:
+        for line in f:
+            ids.append(line.strip())
+        print(ids)
+        
+        
+#          PART ONE
+#          line = f.readline()
 #         print(line)
 
 #         c = dict(Counter(line))
@@ -30,15 +37,13 @@ l = ['abcde', 'fghij', 'klmno', 'pqrst', 'fguij', 'axcye', 'wvxyz']
 
 # print(count2*count3)
 
-
-# if (c - (c & d)) == 1 and (d - (c & d)) == 1
-
-
-for i in range(len(l)):
-    for j in range(len(l)):
-        c = Counter(l[i])
-        d = Counter(l[j])
+for i in range(len(ids)):
+    for j in range(len(ids)):
+        c = Counter(ids[i])
+        d = Counter(ids[j])
         if len(c - d) == 1 and len(d - c) == 1:
-            print(c)
-            print(d)
+            print(ids[i])
+            print(ids[j])
+            print(c-d)
+            print(d-c)
             break
